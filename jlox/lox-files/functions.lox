@@ -1,0 +1,21 @@
+fun add(a, b) {
+    print a + b;
+}
+print add;
+
+fun greet(first, last) {
+    print "Hi, " + first + " " + last + "!";
+}
+
+greet("Dear", "Reader");
+
+fun isXBigger(x, y) {
+    if (x > y) {
+        print "x (" + x + ") is bigger than y (" + y + ")";
+    } else {
+        print "y (" + y + ") is bigger than x (" + x + ")";
+    }
+}
+
+isXBigger(1, 2);
+isXBigger(2, 1);

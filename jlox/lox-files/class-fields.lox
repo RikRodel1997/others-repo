@@ -1,0 +1,8 @@
+class TestClass {}
+
+var klass = TestClass();
+klass.field1 = "this field is a string";
+klass.field2 = 2;
+
+print klass.field1;
+print "field 2 is a number, the value is " + klass.field2 + ".";

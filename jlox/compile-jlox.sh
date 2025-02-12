@@ -1,0 +1,1 @@
+javac -d out $(find jlox/src/main/java -name "*.java")

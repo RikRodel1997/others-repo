@@ -1,0 +1,16 @@
+var a = 0;
+var temp;
+
+for (var b = 1; a < 10000; b = temp + b) {
+    print a;
+    temp = a;
+    a = b;
+}
+
+for (var c = 0; c < 5; c = c + 1) {
+    if (c == 2) {
+        print "c is 2!";
+    } else {
+        print c;
+    }
+}

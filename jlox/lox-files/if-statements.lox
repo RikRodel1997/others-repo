@@ -1,0 +1,59 @@
+if (true) {
+    print "This is true";
+} else {
+    print "This is false";
+}
+
+if (!false) {
+    print "This is !false";
+} else {
+    print "This is true";
+}
+
+if (1 + 2 > 1) {
+    print "3 is bigger than 1";
+}
+
+var a = 1 + 2;
+if (a > 1) {
+    print "a (3) is bigger than 1";
+}
+
+var a = 1 + 2;
+if (a > 1) {
+    var b = true;
+    print "a (3) is bigger than 1";
+    if (b) {
+        print "b is true";
+    } else {
+        print "b is false";
+    }
+}
+
+var a = 1 + 2;
+if (a > 1) {
+    var b = true;
+    if (b) {
+        print "true";
+    } else {
+        print "false";
+    }
+}
+
+if (true) {
+    print "master if";
+    if (true) {
+        print "outer if";
+        if (false) {
+            print "inner if";
+        } else {
+            print "inner else";
+        }
+    } else {
+        print "outer else";
+    }
+} else {
+    print "master else";
+}
+
+if (true) print "one-line if statement";

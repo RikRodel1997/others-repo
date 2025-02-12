@@ -1,0 +1,41 @@
+var a = true;
+var b = false;
+if (a or b) {
+    print "a is true while b is false";
+}
+
+var a = true;
+var b = true;
+if (a or b) {
+    print "a is true and b is true";
+}
+
+
+var a = false;
+var b = false;
+if (a or b) {
+    print "banana";
+}
+print "we don't expect to see 'banana' printed above this";
+
+var a = true;
+var b = false;
+if (a and b) {
+    print "apple";
+}
+print "we don't expect to see 'apple' printed above this";
+
+var a = true;
+var b = true;
+if (a and b) {
+    print "a is true and b is true";
+}
+
+
+var a = false;
+var b = false;
+if (a and b) {
+    print "pear";
+}
+print "we don't expect to see 'pear' printed above this";
+

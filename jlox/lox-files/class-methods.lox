@@ -1,0 +1,19 @@
+class Bacon {
+    eat () {
+        print "Crunch, crunch, crunch!";
+    }
+}
+
+Bacon().eat();
+
+class TestClass {
+    sumAAndB () {
+        return this.a + this.b;
+    }
+}
+
+var klass = TestClass();
+klass.a = 1;
+klass.b = 2;
+
+print klass.sumAAndB(); // prints 3
