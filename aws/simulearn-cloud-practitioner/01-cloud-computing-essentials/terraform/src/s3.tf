@@ -13,7 +13,7 @@ resource "aws_s3_object" "dist" {
   bucket = aws_s3_bucket.cloud-computing-essentials.bucket
   key    = each.value
   source = "${var.static-dir}${each.value}"
-  etag   = filemd5("${var.static-dir}${each.value}")
+  etag   = file("${var.static-dir}${each.value}")
 }
 
 resource "aws_s3_bucket_public_access_block" "example" {
