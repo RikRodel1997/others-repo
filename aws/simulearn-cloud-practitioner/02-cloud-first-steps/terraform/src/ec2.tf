@@ -31,23 +31,25 @@ resource "aws_instance" "island-web" {
   }
 }
 
-resource "aws_security_group" "island-web-sg" {
+resource "aws_security_group" "island-web" {
   name        = "island-web-sg"
   description = "Allow HTTP to web server"
   vpc_id      = data.aws_vpc.default.id
-
-  ingress {
-    description = "HTTP ingress"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
 }
+
+resource "aws_vpc_security_group_egress_rule" "island-web-egress" {
+  security_group_id = aws_security_group.island-web.id
+  ip_protocol       = "-1"
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 0
+  to_port           = 0
+}
+
+resource "aws_vpc_security_group_ingress_rule" "island-web-ingress" {
+  security_group_id = aws_security_group.island-web.id
+  ip_protocol       = "http"
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 80
+  to_port           = 80
+}
+
