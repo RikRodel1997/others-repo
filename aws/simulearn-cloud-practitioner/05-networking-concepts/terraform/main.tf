@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "rik"
+  profile = "aws-cli"
   region  = "eu-central-1"
 }
 
