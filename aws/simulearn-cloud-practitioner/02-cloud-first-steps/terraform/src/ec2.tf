@@ -20,7 +20,7 @@ data "aws_vpc" "default" {
 
 resource "aws_instance" "island-web" {
   ami                         = data.aws_ami.amazon-linux.id
-  instance_type               = "t3.micro"
+  instance_type               = "t2.micro"
   user_data                   = file("../user-data.txt")
   subnet_id                   = var.subnet-id
   vpc_security_group_ids      = [aws_security_group.island-web-sg.id]
@@ -52,4 +52,3 @@ resource "aws_vpc_security_group_ingress_rule" "island-web-ingress" {
   from_port         = 80
   to_port           = 80
 }
-

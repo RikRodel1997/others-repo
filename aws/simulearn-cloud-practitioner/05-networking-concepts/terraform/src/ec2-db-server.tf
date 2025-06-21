@@ -1,7 +1,7 @@
 # Create the EC2 instance
 resource "aws_instance" "db-server" {
   ami                         = data.aws_ami.amazon-linux.id
-  instance_type               = "t3.micro"
+  instance_type               = "t2.micro"
   subnet_id                   = var.subnet-id
   vpc_security_group_ids      = [aws_security_group.db-server.id]
   associate_public_ip_address = true
