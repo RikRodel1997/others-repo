@@ -31,8 +31,6 @@ Fargate is a serverless compute layer for ECS or EKS. To become a basic user of 
 - **Data processing**: Fargate is good for data processing because it can be part of a queue or workflow. When data processing starts, Fargate can scale up as needed to handle the workload. When the data processing is complete, Fargate can scale down to save on costs.
 - **Legacy workloads**: Old Java applications that are not containerized can be run on Fargate to provide the benefits of elastic scaling.
 
-## Specify what it would take to implement Fargate in a real-world scenario.
-
 ## Recognize the benefits of Fargate.
 
 - **Less operational overhead**: Fargate eliminates operational overhead by providing a serverless environment for containerized workloads. There's less operational overhead that needs to be dedicated to deploying, hardening, patching and scaling containerized workloads. Fargate handles these aspects for developers.
